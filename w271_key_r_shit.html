@@ -1,0 +1,53 @@
+<html><body>
+    ********************<br />
+    MIDS Summer 2022<br />
+    ********************<br />
+    W271 Work<br />
+    ********************<br />
+    Team Members:<br />
+    ********************<br />
+    Don Irwin<br />
+
+
+    <br />
+    Shared Documents:<br />
+    ********************<br />
+    
+<br/>
+R current directory issue:<br/>
+    
+    <textarea rows="40" cols="120"> 
+    
+        list.of.packages <- c("rstudioapi")
+new.packages <- list.of.packages[!(list.of.packages %in% installed.packages()[,"Package"])]
+if(length(new.packages)) install.packages(new.packages)
+library(rstudioapi)
+library(stringr)
+
+get_my_wd <- function()
+{
+  current_doc <- getActiveDocumentContext()$path 
+  current_path <- str_replace(str_replace(paste(gsub("(.*)/.*","\\1",current_doc),"")," ",""), " ","")
+  return(current_path)
+}
+
+the_file = paste(get_my_wd(),"/Placekick.csv",sep="")
+print(get_my_wd())
+print(the_file)
+
+
+placekick<-read.table(file = the_file, header = TRUE, sep = ",")
+head(placekick)
+tail(placekick)
+        
+    </textarea>
+    <br/>
+    <br/>
+    
+Next textarea issue:<br/>
+    
+    <textarea rows="40" cols="120"> 
+    </textarea>    
+
+    
+</html>
