@@ -61,9 +61,11 @@ Next textarea issue:<br/>
     
     <textarea rows="20" cols="80"> 
         
-list.of.packages <- c("kableExtra","patchwork","sandwich","lmtest","stargazer","corrplot","fastDummies","kableExtra","car","jtools","tidyquery","jtools","hash","mcprofile")
+list.of.packages <- c("kableExtra","patchwork","sandwich","lmtest","stargazer","corrplot","fastDummies","kableExtra","car","jtools","tidyquery","jtools","hash","mcprofile","aplore3","Hmisc","finalfit")
 new.packages <- list.of.packages[!(list.of.packages %in% installed.packages()[,"Package"])]
 if(length(new.packages)) install.packages(new.packages)
+library(Hmisc)
+library(aplore3)
 library(tidyverse)
 library(jtools)
 library(magrittr)
@@ -80,6 +82,7 @@ library(tidyquery)
 library(jtools)
 library(hash)
 library(mcprofile)
+        
         
     </textarea>    
 
