@@ -64,7 +64,7 @@ Comprehensive for our project:<br/>
 
 list.of.packages <- c("kableExtra","patchwork","sandwich","lmtest","stargazer","corrplot","fastDummies",
                       "kableExtra","car","jtools","tidyquery","jtools","hash","mcprofile","Hmisc","gridExtra",
-                      "scales","reshape","hrbrthemes","GGally","viridis","iplots","MASS","vcd","multcomp","VGAM")
+                      "scales","reshape","hrbrthemes","GGally","viridis","iplots","MASS","vcd","multcomp","VGAM","finalfit","nnet")
 new.packages <- list.of.packages[!(list.of.packages %in% installed.packages()[,"Package"])]
 if(length(new.packages)) install.packages(new.packages)
 library(tidyverse)
@@ -93,6 +93,22 @@ library(GGally)
 library(viridis)
 library(multcomp)
 library(VGAM)
+library(nnet)
+library(finalfit)
+
+get_my_wd <- function()
+{
+  current_doc <- getActiveDocumentContext()$path 
+  current_path <- str_replace(str_replace(paste(gsub("(.*)/.*","\\1",current_doc),"")," ",""), " ","")
+  return(current_path)
+}
+
+directory <-get_my_wd()
+print(directory)
+print(get_my_wd())
+print(the_file)
+
+
 
 get_my_wd <- function()
 {
