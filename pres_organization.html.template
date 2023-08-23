@@ -30,6 +30,11 @@
 
     <a href='http://<stream_project_url>:5555' target='http://<stream_project_url>:5555'>Stream Project JN</a><br/>
 
+    <a href='http://<vis_project_url>:5001' target='http://<vis_project_url>:5001'>Vis Project App</a><br/>
+
+    <a href='http://<vis_project_url>:8888' target='http://<vis_project_url>:8888'>Vis Project App</a><br/>
+
+
     <a href='https://github.com/tuneman7/react_flask' target='https://github.com/tuneman7/react_flask'>react_flask_github</a><br/>
 
     <a href='https://github.com/tuneman7/learn_react' target='https://github.com/tuneman7/learn_react'>learn_react_github</a><br/>
