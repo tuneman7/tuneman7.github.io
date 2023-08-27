@@ -28,6 +28,9 @@
 
     <a href='https://github.com/tuneman7/terraform_launcher' target='https://github.com/tuneman7/terraform_launcher'>https://github.com/tuneman7/terraform_launcher</a><br/>
 
+<br/>
+<br/>
+
     <a href='http://<aws_stream_project_url>:5555' target='http://<aws_stream_project_url>:5555'>AWS Stream Project JN</a><br/>
 
     <a href='http://<aws_vis_project_url>:5001' target='http://<aws_vis_project_url>:5001'>AWS Vis Project App</a><br/>
@@ -40,7 +43,14 @@
 
     <a href='http://<az_vis_project_url>:8888' target='http://<az_vis_project_url>:8888'>Azure Vis Project JN</a><br/>
 
+<br/>
+<br/>
 
+    <a href='https://tuneman7.github.io/ic-cost-pred.html' target='https://tuneman7.github.io/ic-cost-pred.html'>Projected Costs</a><br/>
+
+
+<br/>
+<br/>
 
     <a href='https://github.com/tuneman7/react_flask' target='https://github.com/tuneman7/react_flask'>react_flask_github</a><br/>
 
