@@ -29,11 +29,13 @@
     git config --global credential.helper store<br/>
     <br/> 
     <br/>
-<button onClick="window.location.reload();">Refresh Page</button>        
     <br/>
     
     <a href='https://github.com/tuneman7/terraform_launcher' target='https://github.com/tuneman7/terraform_launcher'>https://github.com/tuneman7/terraform_launcher</a><br/>
-
+    
+<br/>
+<br/>
+<button onClick="window.location.reload();">Refresh Page</button>  
 <br/>
 <br/>
 
