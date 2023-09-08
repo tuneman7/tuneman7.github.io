@@ -30,9 +30,9 @@
     git config --global credential.helper store<br/>
     -->
     <br/>
-    
+   <!-- 
     <a href='https://github.com/tuneman7/terraform_launcher' target='https://github.com/tuneman7/terraform_launcher'>https://github.com/tuneman7/terraform_launcher</a><br/>
-
+    -->
 <script language="javascript">
 function reload_window(){
     m_href=window.location.href;
