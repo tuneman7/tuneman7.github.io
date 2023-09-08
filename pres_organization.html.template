@@ -20,6 +20,7 @@
     ********************<br />
     <br />
     <br/>
+    <!--
     Recursive Grep:<br/>
     grep -lrni ./ -e"likelihood" | more
     <br/>
@@ -27,8 +28,7 @@
     find  ./ -type f -name "*.py"<br/>
     <br/>
     git config --global credential.helper store<br/>
-    <br/> 
-    <br/>
+    -->
     <br/>
     
     <a href='https://github.com/tuneman7/terraform_launcher' target='https://github.com/tuneman7/terraform_launcher'>https://github.com/tuneman7/terraform_launcher</a><br/>
@@ -95,6 +95,7 @@ setTimeout(() => {
 <br/>
 <br/>
 
+<!--
     <a href='https://github.com/tuneman7/react_flask' target='https://github.com/tuneman7/react_flask'>react_flask_github</a><br/>
 
     <a href='https://github.com/tuneman7/learn_react' target='https://github.com/tuneman7/learn_react'>learn_react_github</a><br/>
@@ -102,15 +103,13 @@ setTimeout(() => {
 
     <a href='https://github.com/tuneman7/multi_page_flask' target='https://github.com/tuneman7/multi_page_flask'>multi_page_flask</a><br/>
         
-        
-        
     <a href='https://www.techomoro.com/how-to-create-a-multi-page-website-with-react-in-5-minutes/' target='https://www.techomoro.com/how-to-create-a-multi-page-website-with-react-in-5-minutes/'>multi_page_website_react</a><br/>
     
     <a href='https://ucberkeley-2u-com.zoom.us/' target='https://ucberkeley-2u-com.zoom.us/'>Berkeley Zoom NEW</a><br/>
 
     <a href='https://berkeley.zoom.us/' target='https://berkeley.zoom.us/'>Berkeley Zoom OLD</a><br/>
 
-
+-->
 
 <br/>
 <br/>
