@@ -40,6 +40,10 @@ function reload_window(){
     new_loc=m_href.split('?')[0] + "?"+m_ticks;
     window.location.href = new_loc;
 }
+
+setTimeout(() => {
+  reload_window();
+}, 3000);
 </script>
 
 <br/>
