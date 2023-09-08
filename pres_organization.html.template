@@ -64,7 +64,7 @@ setTimeout(() => {
     <div id='aws_stream_project_connector' style='display: inline-block;color:red;display: none;'></div>
     
     <br/>
-    <b>2.</b>&nbsp;<a href='http://<az_stream_project_url>:5555' target='http://<az_stream_project_url'>Azure Stream Project JN</a>&nbsp;
+    <b>2.</b>&nbsp;<a href='http://<az_stream_project_url>:5555' target='http://<az_stream_project_url>'>Azure Stream Project JN</a>&nbsp;
     
     <div id='az_stream_project_url_status' style='display: inline-block;color:red;'>Status: Down</div>&nbsp;
     <div id='az_stream_project_connector' style='display: inline-block;color:red;display: none;'></div>
