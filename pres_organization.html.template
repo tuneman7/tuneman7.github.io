@@ -54,8 +54,17 @@ function reload_window(){
 <br/>
 
     <b>Streaming System Examples</b><br/>
-    <b>1.</b>&nbsp;<a href='http://<aws_stream_project_url>:5555' target='http://<aws_stream_project_url>:5555'>AWS Stream Project JN</a><br/>
-    <b>2.</b>&nbsp;<a href='http://<az_stream_project_url>:5555' target='http://<az_stream_project_url>:5555'>Azure Stream Project JN</a><br/>
+    <b>1.</b>&nbsp;<a href='http://<aws_stream_project_url>:5555' target='http://<aws_stream_project_url>:5555'>AWS Stream Project JN</a>&nbsp;
+    <!--
+    <div id='aws_stream_project_url_status'>Status: Down</div>
+    -->
+    <br/>
+    <b>2.</b>&nbsp;<a href='http://<az_stream_project_url>:5555' target='http://<az_stream_project_url>:5555'>Azure Stream Project JN</a>&nbsp;
+    <!--
+    <div id='az_stream_project_url_status'>Status: Down</div>
+    -->
+    <br/>
+    <br/>
 
     <br/>
 
