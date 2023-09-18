@@ -67,6 +67,14 @@ function update_service_values(service)
 
     const div_tag_prefix = service.div_tag_prefix;
 
+    //handle special case
+    let connector = document.getElementById["aws_k8s_ml_server_href"];
+    if(connector!=null)
+    {
+        
+    }
+
+
     for(key in service)
     {
         //document.writeln(key + ":" + service[key] + "<br/>");
@@ -97,7 +105,6 @@ function update_service_values(service)
             {
                 href_div.style.cssText = tag_up_style;
             }
-
 
             let m_key = subsystem + "_href_link"
             let a_href = service[m_key]
@@ -201,7 +208,7 @@ function load_service_values()
                 <div id='aws_k8s_ml_server_status'  style='display: inline-block;color:red;'>Server Status: down</div>
             </td>
             <td>
-
+                <div id='aws_k8s_ml_server_href'  style='display: inline-block;color:red;'></div>
             </td>
         </tr>
         <tr>

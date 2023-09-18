@@ -201,7 +201,7 @@ function load_service_values()
                 <div id='aws_k8s_ml_server_status'  style='display: inline-block;color:red;'>Server Status: down</div>
             </td>
             <td>
-
+                <div id='aws_k8s_ml_server_href'  style='display: inline-block;color:red;'></div>
             </td>
         </tr>
         <tr>
