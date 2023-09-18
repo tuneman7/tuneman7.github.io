@@ -102,6 +102,7 @@ for(var i=0;i<setting_obj.services.length;i++)
 
     <br/>
     <br/>
+    
     <b>ML Model Deployed in Kubernetes Example:</b><br/>
     <table border="0" cell_spacing="1", cell_padding="1" border="0">
         <tr>
@@ -112,19 +113,19 @@ for(var i=0;i<setting_obj.services.length;i++)
                 AWS K8s ML Example:
             </td>
             <td>
-                <div id='aws_k8s_ml_log_status'  style='display: inline-block;color:red;'>Server Status: DOWN</div>
+                <div id='aws_k8s_ml_log_status'  style='display: inline-block;color:red;'>Server Status: down</div>
             </td>
             <td>
                 <div id='aws_k8s_ml_log_href'  style='display: inline-block;color:red;'><a id='aws_k8s_ml_log_href_link' style='display: none'></a></div>
             </td>            
             <td>
-                <div id='aws_k8s_ml_app_status'  style='display: inline-block;color:red;'>ML Application: DOWN</div>
+                <div id='aws_k8s_ml_app_status'  style='display: inline-block;color:red;'>ML Application: down</div>
             </td>
             <td>
                 <div id='aws_k8s_ml_app_href'  style='display: inline-block;color:red;'><a id='aws_k8s_ml_app_href_link' style='display: none'><div idi'aws_k8s_ml_app_grafana_href_link_href"></div></a></div>
             </td>
             <td>
-                <div id='aws_k8s_ml_grafana_status'  style='display: inline-block;color:red;'>Grafana: Down</div>
+                <div id='aws_k8s_ml_grafana_status'  style='display: inline-block;color:red;'>Grafana: down</div>
             </td>
             <td>
                 <div id='aws_k8s_ml_grafana_href'  style='display: inline-block;color:red;'><a id='aws_k8s_ml_grafana_href_link' style='display: none'><div idi'aws_k8s_ml_app_grafana_href_link_href"></div></a></div>
@@ -142,18 +143,6 @@ for(var i=0;i<setting_obj.services.length;i++)
 
 <br/>
 <br/>
-
-<!--
-    <a href='https://github.com/tuneman7/react_flask' target='https://github.com/tuneman7/react_flask'>react_flask_github</a><br/>
-
-    <a href='https://github.com/tuneman7/learn_react' target='https://github.com/tuneman7/learn_react'>learn_react_github</a><br/>
-
-
-    <a href='https://github.com/tuneman7/multi_page_flask' target='https://github.com/tuneman7/multi_page_flask'>multi_page_flask</a><br/>
-        
-    <a href='https://www.techomoro.com/how-to-create-a-multi-page-website-with-react-in-5-minutes/' target='https://www.techomoro.com/how-to-create-a-multi-page-website-with-react-in-5-minutes/'>multi_page_website_react</a><br/>
-
--->
 
     <a href='https://ucberkeley-2u-com.zoom.us/' target='https://ucberkeley-2u-com.zoom.us/'>Berkeley Zoom NEW</a><br/>
 
