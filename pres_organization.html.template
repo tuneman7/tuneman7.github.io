@@ -62,7 +62,7 @@ const setting_obj = ''
 <br/>
 
     <b>Streaming System Examples:</b><br/>
-    <b>1.</b>&nbsp;<a href='http://<aws_stream_project_url>:5555' target='http://<aws_stream_project_url'>AWS Stream Project JN</a>&nbsp;
+    <b>1.</b>&nbsp;<a href='http://<aws_stream_project_url>:5555' target='http://<aws_stream_project_url>'>AWS Stream Project JN</a>&nbsp;
     
     <aws_stream_project_url_status>
     <aws_stream_project_connector>
