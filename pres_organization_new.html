@@ -46,9 +46,9 @@ function reload_window(){
 }
 
 
-// setTimeout(() => {
-//   reload_window();
-// }, 5000);
+setTimeout(() => {
+  reload_window();
+}, 5000);
 
 
 let setting_json='{"generic_settings": {"tag_up_style": "display: inline-block;color:green;", "href_style": "display: inline-block;color:blue;", "tag_up_text": "Status: UP", "tag_down_text": "Status: DOWN"}, "services": [{"div_tag_prefix": "aws_k8s_ml", "server_status": "up", "directory": "aws_launchers/lab3/from_scratch/", "server_status_href": "<a href=\\\"aws_k8s_ml_connector.zip\\\" download>Shell SSH Connector</a>", "connector_zip_file": "aws_k8s_ml_connector.zip", "ip_address": "35.88.217.202", "log_status": "up", "log_href": "", "log_href_link": "http://35.88.217.202:80/log.txt", "app_status": "up", "app_href": "", "app_href_link": "http://35.88.217.202:8000/docs", "grafana_status": "up", "grafana_href": "", "grafana_href_link": "http://35.88.217.202:3000"}]}';
@@ -103,6 +103,7 @@ function update_service_values(service)
 
             document.getElementById(status_id_up).style.cssText = tag_up_style;
 
+            document.getElementById(status_id_up).style.innerText = "UP";
 
             //set up the links
             let href_id = div_tag_prefix + "_" + subsystem + "_href";
@@ -215,7 +216,8 @@ function load_service_values()
             <td>
                 <div id='aws_k8s_ml_server_status'  style='display: inline-block;color:red;'>Server Status: down</div>
             </td>
-            <td> <div id='aws_k8s_ml_server_status_up' style='display: none'>UP</div></td>
+            <td> <div id='aws_k8s_ml_server_status_up' style='display: inline-block;color:red;'>Down</div></td>
+            <td>&nbsp;</td>
             <td>
                 <div id='aws_k8s_ml_server_href'  style='display: inline-block;color:red;'></div>
             </td>
@@ -224,9 +226,10 @@ function load_service_values()
             <td></td>
             <td></td>
             <td>
-                <div id='aws_k8s_ml_log_status'  style='display: inline-block;color:red;'>Log System: down</div>
+                <div id='aws_k8s_ml_log_status'  style='display: inline-block;color:red;'>Log System: </div>
             </td>
-            <td> <div id='aws_k8s_ml_log_status_up' style='display: none'>UP</div></td>
+            <td> <div id='aws_k8s_ml_log_status_up' style='display: inline-block;color:red;'>Down</div></td>
+            <td>&nbsp;</td>
             <td>
                 <div id='aws_k8s_ml_log_href'  style='display: inline-block;color:red;'><a id='aws_k8s_ml_log_href_link' style='display: none'></a></div>
             </td>            
@@ -236,9 +239,10 @@ function load_service_values()
             <td></td>
 
             <td>
-                <div id='aws_k8s_ml_app_status'  style='display: inline-block;color:red;'>ML Application: down</div>
+                <div id='aws_k8s_ml_app_status'  style='display: inline-block;color:red;'>ML Application: </div>
             </td>
-            <td> <div id='aws_k8s_ml_app_status_up' style='display: none'>UP</div></td>
+            <td> <div id='aws_k8s_ml_app_status_up' style='display: inline-block;color:red;'>Down</div></td>
+            <td>&nbsp;</td>
             <td>
                 <div id='aws_k8s_ml_app_href'  style='display: inline-block;color:red;'><a id='aws_k8s_ml_app_href_link' style='display: none'><div idi'aws_k8s_ml_app_grafana_href_link_href"></div></a></div>
             </td>
@@ -247,9 +251,10 @@ function load_service_values()
             <td></td>
             <td></td>
             <td>
-                <div id='aws_k8s_ml_grafana_status'  style='display: inline-block;color:red;'>Grafana: down</div>
+                <div id='aws_k8s_ml_grafana_status'  style='display: inline-block;color:red;'>Grafana: </div>
             </td>
-            <td> <div  id='aws_k8s_ml_grafana_status_up' style='display: none'>UP</div></td>            
+            <td> <div  id='aws_k8s_ml_grafana_status_up' style='display: inline-block;color:red;'>Down</div></td>
+            <td>&nbsp;</td>
             <td>
                 <div id='aws_k8s_ml_grafana_href'  style='display: inline-block;color:red;'><a id='aws_k8s_ml_grafana_href_link' style='display: none'><div idi'aws_k8s_ml_app_grafana_href_link_href"></div></a></div>
             </td>
