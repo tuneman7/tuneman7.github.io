@@ -51,7 +51,7 @@ setTimeout(() => {
 }, 5000);
 
 
-let setting_json='{"generic_settings": {"tag_up_style": "display: inline-block;color:green;", "tag_up_text": "Status: UP", "tag_down_text": "Status: DOWN"}, "services": [{"div_tag_prefix": "aws_k8s_ml", "server_status": "up", "directory": "aws_launchers/lab3/from_scratch/", "connector_zip_href": "<a href=\\\"aws_k8s_ml_connector.zip\\\" download>Shell SSH Connector</a>", "ip_address": "34.221.79.182", "log_status": "up", "log_href": "", "log_href_link": "http://34.221.79.182:80/log.txt", "app_status": "", "app_href": "", "app_href_link": "http://34.221.79.182:8000/docs", "grafana_status": "", "grafana_href": "", "grafana_href_link": "http://34.221.79.182:3000"}]}';
+let setting_json='{"generic_settings": {"tag_up_style": "display: inline-block;color:green;", "tag_up_text": "Status: UP", "tag_down_text": "Status: DOWN"}, "services": [{"div_tag_prefix": "aws_k8s_ml", "server_status": "up", "directory": "aws_launchers/lab3/from_scratch/", "connector_zip_href": "<a href=\\\"aws_k8s_ml_connector.zip\\\" download>Shell SSH Connector</a>", "ip_address": "34.221.79.182", "log_status": "up", "log_href": "", "log_href_link": "http://34.221.79.182:80/log.txt", "app_status": "up", "app_href": "", "app_href_link": "http://34.221.79.182:8000/docs", "grafana_status": "up", "grafana_href": "", "grafana_href_link": "http://34.221.79.182:3000"}]}';
 const setting_obj = JSON.parse(setting_json);
 
 const tag_up_style = setting_obj.generic_settings.tag_up_style;
