@@ -3,6 +3,9 @@
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
     <meta http-equiv="Pragma" content="no-cache" />
     <meta http-equiv="Expires" content="0" />    
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>    
+
 </head>
     <body>
     ********************<br />
@@ -42,12 +45,50 @@ function reload_window(){
     window.location.href = new_loc;
 }
 
-setTimeout(() => {
-  reload_window();
-}, 5000);
+// setTimeout(() => {
+//   reload_window();
+// }, 5000);
 
 let setting_json='{"generic_settings": {"tag_up_style": "display: inline-block;color:green;", "tag_up_text": "Status: UP", "tag_down_text": "Status: DOWN"}, "services": [{"div_tag_prefix": "aws_k8s_ml", "directory": "aws_launchers/lab3/from_scratch/", "connector_zip_href": "<a href=\\\"aws_k8s_ml_connector.zip\\\" download>Shell SSH Connector</a>", "ip_address": "", "log_href": "", "log_href_link": "http://10.10.10.10:80/log.txt", "app_status": "", "app_href_link": "http://10.10.10.10:8000/docs", "grafana_status": "", "grafana_href": "", "grafana_href_link": "http://10.10.10.10:3000"}]}';
 const setting_obj = JSON.parse(setting_json);
+
+var settings = {
+'cache': false,
+'dataType': "jsonp",
+"async": true,
+"crossDomain": true,
+"url": "http://192.168.49.2:32111/docs",
+"method": "GET",
+"headers": {
+"accept": "application/json",
+"Access-Control-Allow-Origin":"*"
+}
+}
+$.ajax(settings).done(function (response) {
+console.log(response);
+});
+
+function check_if_url_is_up(url_loc)
+{
+    $.get(url_loc, (data, status) => {
+  console.log(data);
+});
+
+}
+
+function process_service(service_obj)
+{
+    let this_prefix = service_obj.div_tag_prefix;
+    //check_if_url_is_up("http://192.168.49.2:32111/docs");
+}
+
+
+for(var i=0;i<setting_obj.services.length;i++)
+{
+    let this_service = setting_obj.services[i];
+    process_service(this_service);
+}
+
 
 </script>
 
