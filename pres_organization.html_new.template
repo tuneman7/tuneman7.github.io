@@ -45,11 +45,11 @@ function reload_window(){
     window.location.href = new_loc;
 }
 
-//
-//setTimeout(() => {
-//  reload_window();
-//}, 5000);
-//
+
+setTimeout(() => {
+  reload_window();
+}, 5000);
+
 
 let setting_json='';
 const setting_obj = '';
@@ -65,39 +65,72 @@ function ucase_word(word)
 function update_service_values(service)
 {
 
-    let tag_prefix = service.tag_prefix;
+    const div_tag_prefix = service.div_tag_prefix;
 
     for(key in service)
     {
-        document.writeln(key + ":" + service[key] + "<br/>");
-
+        //document.writeln(key + ":" + service[key] + "<br/>");
         //check if we're dealing with a status tag
-        if(key.endsWith("status"))
+        if(key.endsWith("status") && service[key]=="up")
         {
             console.log(key);
             console.log(service[key]);
             //get the element we're dealing with
-            key_array=key.split('_');
-            l_keys = key_array.length;
-            subsystem = key.split('_')[0];
-            status_descriptor = ucase_word(key_array[l_keys-2]) + " " + ucase_word(key_array[l_keys-1]);
+            let key_array=key.split('_');
+            let l_keys = key_array.length;
+            let subsystem = key.split('_')[0];
+            let status_descriptor = ucase_word(key_array[l_keys-2]) + " " + ucase_word(key_array[l_keys-1]);
             console.log(status_descriptor);
             console.log(subsystem);
-            //check if it is up
-            if(service[key]=="up")
-            {
-                console.log("the service is up");
-            }
-        }
 
+            let status_id = div_tag_prefix + "_" + subsystem + "_status";
+
+            document.getElementById(status_id).style.cssText = tag_up_style;
+
+            document.getElementById(status_id).innerText = status_descriptor + " : UP"
+
+            //set up the links
+            let href_id = div_tag_prefix + "_" + subsystem + "_href";
+            
+            var href_div = document.getElementById(href_id);
+            if(href_div!=null)
+            {
+                href_div.style.cssText = tag_up_style;
+            }
+
+
+            let m_key = subsystem + "_href_link"
+            let a_href = service[m_key]
+
+            href_id = div_tag_prefix + "_" + subsystem + "_href_link";
+
+            var href_div = document.getElementById(href_id);
+            if(href_div!=null)
+            {
+                href_div.style.cssText = tag_up_style;
+
+                href_div.innerText = status_descriptor + " Link";
+
+                href_div.setAttribute("href",a_href);
+                href_div.setAttribute("target",a_href);
+            }
+
+        }
     }
 }
 
-for(var i=0;i<setting_obj.services.length;i++)
+
+function load_service_values()
 {
+    for(var i=0;i<setting_obj.services.length;i++)
+    {
     let this_service = setting_obj.services[i];
     update_service_values(this_service);
+    }
+
 }
+
+
 
 
 </script>
@@ -155,20 +188,42 @@ for(var i=0;i<setting_obj.services.length;i++)
                 AWS K8s ML Example:
             </td>
             <td>
+
+            </td>
+        </tr>            
+        <tr>
+            <td>
+
+            </td>
+            <td>
                 <div id='aws_k8s_ml_server_status'  style='display: inline-block;color:red;'>Server Status: down</div>
             </td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td></td>
             <td>
                 <div id='aws_k8s_ml_log_status'  style='display: inline-block;color:red;'>Log System: down</div>
             </td>
             <td>
                 <div id='aws_k8s_ml_log_href'  style='display: inline-block;color:red;'><a id='aws_k8s_ml_log_href_link' style='display: none'></a></div>
             </td>            
+        </tr>
+        <tr>
+            <td></td>
+
             <td>
                 <div id='aws_k8s_ml_app_status'  style='display: inline-block;color:red;'>ML Application: down</div>
             </td>
             <td>
                 <div id='aws_k8s_ml_app_href'  style='display: inline-block;color:red;'><a id='aws_k8s_ml_app_href_link' style='display: none'><div idi'aws_k8s_ml_app_grafana_href_link_href"></div></a></div>
             </td>
+        </tr>
+        <tr>
+            <td></td>
+
             <td>
                 <div id='aws_k8s_ml_grafana_status'  style='display: inline-block;color:red;'>Grafana: down</div>
             </td>
@@ -203,4 +258,11 @@ for(var i=0;i<setting_obj.services.length;i++)
 
     </body>
     
+<script language="javascript">
+
+load_service_values();
+
+</script>
+
+
 </html>
