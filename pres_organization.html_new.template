@@ -47,7 +47,7 @@ setTimeout(() => {
 }, 5000);
 
 let setting_json=''
-setting_obj = ""
+const setting_obj = ''
 
 </script>
 
