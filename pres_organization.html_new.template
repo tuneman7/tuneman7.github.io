@@ -52,9 +52,19 @@ setTimeout(() => {
 let setting_json='';
 const setting_obj = '';
 
+function update_service_values(service)
+{
+    let tag_prefix = service.tag_prefix;
+    for(key in service)
+    {
+        document.writeln(key + ":" + service[key] + "<br/>");
+    }
+}
+
 for(var i=0;i<setting_obj.services.length;i++)
 {
     let this_service = setting_obj.services[i];
+    update_service_values(this_service);
 }
 
 
