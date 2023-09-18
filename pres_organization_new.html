@@ -2,10 +2,10 @@
 <head>
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
     <meta http-equiv="Pragma" content="no-cache" />
-    <meta http-equiv="Expires" content="0" />    
-
+    <meta http-equiv="Expires" content="0" />   
+    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>    
-
+    
 </head>
     <body>
     ********************<br />
@@ -45,32 +45,16 @@ function reload_window(){
     window.location.href = new_loc;
 }
 
-// setTimeout(() => {
-//   reload_window();
-// }, 5000);
+setTimeout(() => {
+  reload_window();
+}, 5000);
 
-let setting_json='{"generic_settings": {"tag_up_style": "display: inline-block;color:green;", "tag_up_text": "Status: UP", "tag_down_text": "Status: DOWN"}, "services": [{"div_tag_prefix": "aws_k8s_ml", "directory": "aws_launchers/lab3/from_scratch/", "connector_zip_href": "<a href=\\\"aws_k8s_ml_connector.zip\\\" download>Shell SSH Connector</a>", "ip_address": "", "log_href": "", "log_href_link": "http://10.10.10.10:80/log.txt", "app_status": "", "app_href_link": "http://10.10.10.10:8000/docs", "grafana_status": "", "grafana_href": "", "grafana_href_link": "http://10.10.10.10:3000"}]}';
+let setting_json='{"generic_settings": {"tag_up_style": "display: inline-block;color:green;", "tag_up_text": "Status: UP", "tag_down_text": "Status: DOWN"}, "services": [{"div_tag_prefix": "aws_k8s_ml", "server_status": "up", "directory": "aws_launchers/lab3/from_scratch/", "connector_zip_href": "<a href=\\\"aws_k8s_ml_connector.zip\\\" download>Shell SSH Connector</a>", "ip_address": "10.10.10.10", "log_href": "", "log_href_link": "http://10.10.10.10:80/log.txt", "app_status": "", "app_href_link": "http://10.10.10.10:8000/docs", "grafana_status": "", "grafana_href": "", "grafana_href_link": "http://10.10.10.10:3000"}]}';
 const setting_obj = JSON.parse(setting_json);
-
-function check_if_url_is_up(url_loc)
-{
-    $.get(url_loc, (data, status) => {
-  console.log(data);
-});
-
-}
-
-function process_service(service_obj)
-{
-    let this_prefix = service_obj.div_tag_prefix;
-    //check_if_url_is_up("http://192.168.49.2:32111/docs");
-}
-
 
 for(var i=0;i<setting_obj.services.length;i++)
 {
     let this_service = setting_obj.services[i];
-    process_service(this_service);
 }
 
 
@@ -118,6 +102,7 @@ for(var i=0;i<setting_obj.services.length;i++)
 
     <br/>
     <br/>
+    
     <b>ML Model Deployed in Kubernetes Example:</b><br/>
     <table border="0" cell_spacing="1", cell_padding="1" border="0">
         <tr>
@@ -128,19 +113,19 @@ for(var i=0;i<setting_obj.services.length;i++)
                 AWS K8s ML Example:
             </td>
             <td>
-                <div id='aws_k8s_ml_log_status'  style='display: inline-block;color:red;'>Server Status: DOWN</div>
+                <div id='aws_k8s_ml_log_status'  style='display: inline-block;color:red;'>Server Status: down</div>
             </td>
             <td>
                 <div id='aws_k8s_ml_log_href'  style='display: inline-block;color:red;'><a id='aws_k8s_ml_log_href_link' style='display: none'></a></div>
             </td>            
             <td>
-                <div id='aws_k8s_ml_app_status'  style='display: inline-block;color:red;'>ML Application: DOWN</div>
+                <div id='aws_k8s_ml_app_status'  style='display: inline-block;color:red;'>ML Application: down</div>
             </td>
             <td>
                 <div id='aws_k8s_ml_app_href'  style='display: inline-block;color:red;'><a id='aws_k8s_ml_app_href_link' style='display: none'><div idi'aws_k8s_ml_app_grafana_href_link_href"></div></a></div>
             </td>
             <td>
-                <div id='aws_k8s_ml_grafana_status'  style='display: inline-block;color:red;'>Grafana: Down</div>
+                <div id='aws_k8s_ml_grafana_status'  style='display: inline-block;color:red;'>Grafana: down</div>
             </td>
             <td>
                 <div id='aws_k8s_ml_grafana_href'  style='display: inline-block;color:red;'><a id='aws_k8s_ml_grafana_href_link' style='display: none'><div idi'aws_k8s_ml_app_grafana_href_link_href"></div></a></div>
@@ -158,18 +143,6 @@ for(var i=0;i<setting_obj.services.length;i++)
 
 <br/>
 <br/>
-
-<!--
-    <a href='https://github.com/tuneman7/react_flask' target='https://github.com/tuneman7/react_flask'>react_flask_github</a><br/>
-
-    <a href='https://github.com/tuneman7/learn_react' target='https://github.com/tuneman7/learn_react'>learn_react_github</a><br/>
-
-
-    <a href='https://github.com/tuneman7/multi_page_flask' target='https://github.com/tuneman7/multi_page_flask'>multi_page_flask</a><br/>
-        
-    <a href='https://www.techomoro.com/how-to-create-a-multi-page-website-with-react-in-5-minutes/' target='https://www.techomoro.com/how-to-create-a-multi-page-website-with-react-in-5-minutes/'>multi_page_website_react</a><br/>
-
--->
 
     <a href='https://ucberkeley-2u-com.zoom.us/' target='https://ucberkeley-2u-com.zoom.us/'>Berkeley Zoom NEW</a><br/>
 
