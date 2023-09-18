@@ -97,7 +97,12 @@ function update_service_values(service)
 
             document.getElementById(status_id).style.cssText = tag_up_style;
 
-            document.getElementById(status_id).innerText = status_descriptor + " : UP"
+            document.getElementById(status_id).innerText = status_descriptor + " :"
+
+            let status_id = div_tag_prefix + "_" + subsystem + "_status_UP";
+
+            document.getElementById(status_id).style.cssText = tag_up_style;
+
 
             //set up the links
             let href_id = div_tag_prefix + "_" + subsystem + "_href";
@@ -210,6 +215,7 @@ function load_service_values()
             <td>
                 <div id='aws_k8s_ml_server_status'  style='display: inline-block;color:red;'>Server Status: down</div>
             </td>
+            <td></td>
             <td>
                 <div id='aws_k8s_ml_server_href'  style='display: inline-block;color:red;'></div>
             </td>
@@ -220,6 +226,7 @@ function load_service_values()
             <td>
                 <div id='aws_k8s_ml_log_status'  style='display: inline-block;color:red;'>Log System: down</div>
             </td>
+            <td id='aws_k8s_ml_log_status_up' style='display: none'>UP</td>
             <td>
                 <div id='aws_k8s_ml_log_href'  style='display: inline-block;color:red;'><a id='aws_k8s_ml_log_href_link' style='display: none'></a></div>
             </td>            
@@ -231,6 +238,7 @@ function load_service_values()
             <td>
                 <div id='aws_k8s_ml_app_status'  style='display: inline-block;color:red;'>ML Application: down</div>
             </td>
+            <td id='aws_k8s_ml_app_status_up' style='display: none'>UP</td>
             <td>
                 <div id='aws_k8s_ml_app_href'  style='display: inline-block;color:red;'><a id='aws_k8s_ml_app_href_link' style='display: none'><div idi'aws_k8s_ml_app_grafana_href_link_href"></div></a></div>
             </td>
@@ -241,6 +249,7 @@ function load_service_values()
             <td>
                 <div id='aws_k8s_ml_grafana_status'  style='display: inline-block;color:red;'>Grafana: down</div>
             </td>
+            <td id='aws_k8s_ml_grafana_status_up' style='display: none'>UP</td>            
             <td>
                 <div id='aws_k8s_ml_grafana_href'  style='display: inline-block;color:red;'><a id='aws_k8s_ml_grafana_href_link' style='display: none'><div idi'aws_k8s_ml_app_grafana_href_link_href"></div></a></div>
             </td>
