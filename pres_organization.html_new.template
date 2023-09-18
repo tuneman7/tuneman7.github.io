@@ -57,6 +57,11 @@ const setting_obj = '';
 const tag_up_style = setting_obj.generic_settings.tag_up_style;
 console.log(tag_up_style);
 
+function ucase_word(word)
+{
+    return word.charAt(0).toUpperCase() + word.slice(1)
+}
+
 function update_service_values(service)
 {
 
@@ -71,6 +76,18 @@ function update_service_values(service)
         {
             console.log(key);
             console.log(service[key]);
+            //get the element we're dealing with
+            key_array=key.split('_');
+            l_keys = key_array.length;
+            subsystem = key.split('_')[0];
+            status_descriptor = ucase_word(key_array[l_keys-2]) + " " + ucase_word(key_array[l_keys-1]);
+            console.log(status_descriptor);
+            console.log(subsystem);
+            //check if it is up
+            if(service[key]=="up")
+            {
+                console.log("the service is up");
+            }
         }
 
     }
@@ -138,7 +155,10 @@ for(var i=0;i<setting_obj.services.length;i++)
                 AWS K8s ML Example:
             </td>
             <td>
-                <div id='aws_k8s_ml_log_status'  style='display: inline-block;color:red;'>Server Status: down</div>
+                <div id='aws_k8s_ml_server_status'  style='display: inline-block;color:red;'>Server Status: down</div>
+            </td>
+            <td>
+                <div id='aws_k8s_ml_log_status'  style='display: inline-block;color:red;'>Log System: down</div>
             </td>
             <td>
                 <div id='aws_k8s_ml_log_href'  style='display: inline-block;color:red;'><a id='aws_k8s_ml_log_href_link' style='display: none'></a></div>
