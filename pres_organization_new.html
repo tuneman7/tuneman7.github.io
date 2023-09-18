@@ -58,12 +58,15 @@ console.log(tag_up_style);
 
 function update_service_values(service)
 {
+
     let tag_prefix = service.tag_prefix;
+
     for(key in service)
     {
         document.writeln(key + ":" + service[key] + "<br/>");
-        //check if we're dealing with a href tag
-        if(key.endsWith("href"))
+
+        //check if we're dealing with a status tag
+        if(key.endsWith("status"))
         {
             console.log(key);
             console.log(service[key]);
