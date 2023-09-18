@@ -97,7 +97,7 @@ function update_service_values(service)
 
             document.getElementById(status_id).style.cssText = tag_up_style;
 
-            document.getElementById(status_id).innerText = status_descriptor + " : <td>UP</td>"
+            document.getElementById(status_id).innerHTML = status_descriptor + " : <td>UP</td>"
 
             //set up the links
             let href_id = div_tag_prefix + "_" + subsystem + "_href";
