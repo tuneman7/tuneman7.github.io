@@ -51,7 +51,7 @@ function reload_window(){
 //}, 5000);
 //
 
-let setting_json='{"generic_settings": {"tag_up_style": "display: inline-block;color:green;", "tag_up_text": "Status: UP", "tag_down_text": "Status: DOWN"}, "services": [{"div_tag_prefix": "aws_k8s_ml", "server_status": "up", "directory": "aws_launchers/lab3/from_scratch/", "connector_zip_href": "<a href=\\\"aws_k8s_ml_connector.zip\\\" download>Shell SSH Connector</a>", "ip_address": "54.202.216.84", "log_status": "up", "log_href": "", "log_href_link": "http://54.202.216.84:80/log.txt", "app_status": "", "app_href": "", "app_href_link": "http://54.202.216.84:8000/docs", "grafana_status": "", "grafana_href": "", "grafana_href_link": "http://54.202.216.84:3000"}]}';
+let setting_json='{"generic_settings": {"tag_up_style": "display: inline-block;color:green;", "tag_up_text": "Status: UP", "tag_down_text": "Status: DOWN"}, "services": [{"div_tag_prefix": "aws_k8s_ml", "server_status": "up", "directory": "aws_launchers/lab3/from_scratch/", "connector_zip_href": "<a href=\\\"aws_k8s_ml_connector.zip\\\" download>Shell SSH Connector</a>", "ip_address": "54.202.216.84", "log_status": "up", "log_href": "", "log_href_link": "http://54.202.216.84:80/log.txt", "app_status": "up", "app_href": "", "app_href_link": "http://54.202.216.84:8000/docs", "grafana_status": "up", "grafana_href": "", "grafana_href_link": "http://54.202.216.84:3000"}]}';
 const setting_obj = JSON.parse(setting_json);
 
 const tag_up_style = setting_obj.generic_settings.tag_up_style;
@@ -155,7 +155,10 @@ for(var i=0;i<setting_obj.services.length;i++)
                 AWS K8s ML Example:
             </td>
             <td>
-                <div id='aws_k8s_ml_log_status'  style='display: inline-block;color:red;'>Server Status: down</div>
+                <div id='aws_k8s_ml_server_status'  style='display: inline-block;color:red;'>Server Status: down</div>
+            </td>
+            <td>
+                <div id='aws_k8s_ml_log_status'  style='display: inline-block;color:red;'>Log System: down</div>
             </td>
             <td>
                 <div id='aws_k8s_ml_log_href'  style='display: inline-block;color:red;'><a id='aws_k8s_ml_log_href_link' style='display: none'></a></div>
