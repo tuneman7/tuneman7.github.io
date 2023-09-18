@@ -69,11 +69,16 @@ function update_service_values(service)
     const div_tag_prefix = service.div_tag_prefix;
 
     //handle the special case
-    let condl_d = document.getElementById["aws_k8s_ml_server_href"];
+    let condl_d = document.getElementById("aws_k8s_ml_server_href");
     if(condl_d!=null)
     {
+        console.log("in here");
         condl_d.style.cssText = href_style;
         condl_d.innerHTML = service["server_status_href"];
+    }
+    else
+    {
+        console.log("not in here");
     }
 
 
