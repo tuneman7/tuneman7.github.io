@@ -190,8 +190,10 @@ function load_service_values()
             <td>
 
             </td>
+            <td></td>
         </tr>            
         <tr>
+            <td></td>
             <td>
 
             </td>
@@ -204,6 +206,7 @@ function load_service_values()
         </tr>
         <tr>
             <td></td>
+            <td></td>
             <td>
                 <div id='aws_k8s_ml_log_status'  style='display: inline-block;color:red;'>Log System: down</div>
             </td>
@@ -212,6 +215,7 @@ function load_service_values()
             </td>            
         </tr>
         <tr>
+            <td></td>
             <td></td>
 
             <td>
@@ -223,7 +227,7 @@ function load_service_values()
         </tr>
         <tr>
             <td></td>
-
+            <td></td>
             <td>
                 <div id='aws_k8s_ml_grafana_status'  style='display: inline-block;color:red;'>Grafana: down</div>
             </td>
