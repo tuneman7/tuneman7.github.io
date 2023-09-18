@@ -45,13 +45,13 @@ function reload_window(){
     window.location.href = new_loc;
 }
 
-//
-//setTimeout(() => {
-//  reload_window();
-//}, 5000);
-//
 
-let setting_json='{"generic_settings": {"tag_up_style": "display: inline-block;color:green;", "tag_up_text": "Status: UP", "tag_down_text": "Status: DOWN"}, "services": [{"div_tag_prefix": "aws_k8s_ml", "server_status": "up", "directory": "aws_launchers/lab3/from_scratch/", "connector_zip_href": "<a href=\\\"aws_k8s_ml_connector.zip\\\" download>Shell SSH Connector</a>", "ip_address": "54.202.216.84", "log_status": "up", "log_href": "", "log_href_link": "http://54.202.216.84:80/log.txt", "app_status": "up", "app_href": "", "app_href_link": "http://54.202.216.84:8000/docs", "grafana_status": "up", "grafana_href": "", "grafana_href_link": "http://54.202.216.84:3000"}]}';
+setTimeout(() => {
+  reload_window();
+}, 5000);
+
+
+let setting_json='{"generic_settings": {"tag_up_style": "display: inline-block;color:green;", "tag_up_text": "Status: UP", "tag_down_text": "Status: DOWN"}, "services": [{"div_tag_prefix": "aws_k8s_ml", "server_status": "down", "directory": "aws_launchers/lab3/from_scratch/", "connector_zip_href": "<a href=\\\"aws_k8s_ml_connector.zip\\\" download>Shell SSH Connector</a>", "ip_address": "", "log_status": "", "log_href": "", "log_href_link": "http://<ip_address/>:80/log.txt", "app_status": "", "app_href": "", "app_href_link": "http://<ip_address/>:8000/docs", "grafana_status": "", "grafana_href": "", "grafana_href_link": "http://<ip_address/>:3000"}]}';
 const setting_obj = JSON.parse(setting_json);
 
 const tag_up_style = setting_obj.generic_settings.tag_up_style;
@@ -115,11 +115,7 @@ function update_service_values(service)
                 href_div.setAttribute("target",a_href);
             }
 
-
-            
-
         }
-
     }
 }
 
@@ -133,6 +129,7 @@ function load_service_values()
     }
 
 }
+
 
 
 
@@ -259,13 +256,13 @@ function load_service_values()
 
 
 
-</body>
-
+    </body>
+    
 <script language="javascript">
 
 load_service_values();
 
 </script>
 
-    
+
 </html>
