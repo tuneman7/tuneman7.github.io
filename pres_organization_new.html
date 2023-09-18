@@ -45,14 +45,16 @@ function reload_window(){
     window.location.href = new_loc;
 }
 
-setTimeout(() => {
-  reload_window();
-}, 5000);
+// setTimeout(() => {
+//   reload_window();
+// }, 5000);
 
 let setting_json='{"generic_settings": {"tag_up_style": "display: inline-block;color:green;", "tag_up_text": "Status: UP", "tag_down_text": "Status: DOWN"}, "services": [{"div_tag_prefix": "aws_k8s_ml", "server_status": "up", "directory": "aws_launchers/lab3/from_scratch/", "connector_zip_href": "<a href=\\\"aws_k8s_ml_connector.zip\\\" download>Shell SSH Connector</a>", "ip_address": "34.222.131.37", "log_href": "up", "log_href_link": "http://34.222.131.37:80/log.txt", "app_status": "up", "app_href_link": "http://34.222.131.37:8000/docs", "grafana_status": "", "grafana_href": "up", "grafana_href_link": "http://34.222.131.37:3000"}]}';
 const setting_obj = JSON.parse(setting_json);
 
-const tag_up_style = setting_json.generic_settings["tag_up_style"];
+const tag_up_style = setting_obj.generic_settings.tag_up_style;
+console.log(tag_up_style);
+
 
 function update_service_values(service)
 {
@@ -60,6 +62,13 @@ function update_service_values(service)
     for(key in service)
     {
         document.writeln(key + ":" + service[key] + "<br/>");
+        //check if we're dealing with a href tag
+        if(key.endsWith("href"))
+        {
+            console.log(key);
+            console.log(service[key]);
+        }
+
     }
 }
 

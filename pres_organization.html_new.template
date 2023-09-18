@@ -45,14 +45,17 @@ function reload_window(){
     window.location.href = new_loc;
 }
 
-setTimeout(() => {
-  reload_window();
-}, 5000);
+//
+//setTimeout(() => {
+//  reload_window();
+//}, 5000);
+//
 
 let setting_json='';
 const setting_obj = '';
 
-const tag_up_style = setting_json.generic_settings["tag_up_style"];
+const tag_up_style = setting_obj.generic_settings.tag_up_style;
+console.log(tag_up_style);
 
 function update_service_values(service)
 {
