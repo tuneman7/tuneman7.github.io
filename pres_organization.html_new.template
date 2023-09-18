@@ -46,7 +46,7 @@ setTimeout(() => {
   reload_window();
 }, 5000);
 
-let setting_text=''
+let setting_json=''
 setting_obj = ""
 
 </script>
