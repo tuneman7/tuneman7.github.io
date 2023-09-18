@@ -52,6 +52,8 @@ setTimeout(() => {
 let setting_json='';
 const setting_obj = '';
 
+const tag_up_style = setting_json.generic_settings["tag_up_style"];
+
 function update_service_values(service)
 {
     let tag_prefix = service.tag_prefix;

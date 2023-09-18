@@ -52,6 +52,8 @@ setTimeout(() => {
 let setting_json='{"generic_settings": {"tag_up_style": "display: inline-block;color:green;", "tag_up_text": "Status: UP", "tag_down_text": "Status: DOWN"}, "services": [{"div_tag_prefix": "aws_k8s_ml", "server_status": "up", "directory": "aws_launchers/lab3/from_scratch/", "connector_zip_href": "<a href=\\\"aws_k8s_ml_connector.zip\\\" download>Shell SSH Connector</a>", "ip_address": "34.222.131.37", "log_href": "up", "log_href_link": "http://34.222.131.37:80/log.txt", "app_status": "", "app_href_link": "http://34.222.131.37:8000/docs", "grafana_status": "", "grafana_href": "", "grafana_href_link": "http://34.222.131.37:3000"}]}';
 const setting_obj = JSON.parse(setting_json);
 
+const tag_up_style = setting_json.generic_settings["tag_up_style"];
+
 function update_service_values(service)
 {
     let tag_prefix = service.tag_prefix;
