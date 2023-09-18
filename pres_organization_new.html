@@ -55,7 +55,8 @@ let setting_json='{"generic_settings": {"tag_up_style": "display: inline-block;c
 const setting_obj = JSON.parse(setting_json);
 
 const tag_up_style = setting_obj.generic_settings.tag_up_style;
-console.log(tag_up_style);
+const href_style = setting_obj.generic_settings.href_style;
+
 
 function ucase_word(word)
 {
@@ -66,6 +67,15 @@ function update_service_values(service)
 {
 
     const div_tag_prefix = service.div_tag_prefix;
+    
+    //handle the special case
+    let condl_d = document.getElementById["aws_k8s_ml_server_href"];
+    if(condl_d!=null)
+    {
+        condl_d.style.cssText = href_style;
+        condl_d.innerHTML = service["server_status_href"];
+    }
+
 
     for(key in service)
     {
@@ -86,7 +96,6 @@ function update_service_values(service)
             let status_id = div_tag_prefix + "_" + subsystem + "_status";
 
             document.getElementById(status_id).style.cssText = tag_up_style;
-
             document.getElementById(status_id).innerText = status_descriptor + " : UP"
 
             //set up the links
@@ -98,7 +107,6 @@ function update_service_values(service)
                 href_div.style.cssText = tag_up_style;
             }
 
-
             let m_key = subsystem + "_href_link"
             let a_href = service[m_key]
 
@@ -107,14 +115,11 @@ function update_service_values(service)
             var href_div = document.getElementById(href_id);
             if(href_div!=null)
             {
-                href_div.style.cssText = tag_up_style;
-
+                href_div.style.cssText = href_style;
                 href_div.innerText = status_descriptor + " Link";
-
                 href_div.setAttribute("href",a_href);
                 href_div.setAttribute("target",a_href);
             }
-
         }
     }
 }
