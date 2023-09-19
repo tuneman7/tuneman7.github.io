@@ -178,13 +178,13 @@ function load_service_values()
                 <a href='http://<aws_stream_project_url>:5555' target='http://<aws_stream_project_url'>AWS Stream Project JN</a>
             </td>
             <td>
-                &nbsp;
+                &nbsp;&nbsp;
             </td>                        
             <td>
                 <aws_stream_project_url_status>
             </td>
             <td>
-                &nbsp;
+                &nbsp;&nbsp;
             </td>
             <td>
                 <aws_stream_project_connector>
@@ -195,19 +195,19 @@ function load_service_values()
                 <b>2.</b>
             </td>
             <td>
-                &nbsp;
+                &nbsp;&nbsp;
             </td>
             <td>
                 <a href='http://<az_stream_project_url>:5555' target='http://<az_stream_project_url>'>Azure Stream Project JN</a>
             </td>
             <td>
-                &nbsp;
+                &nbsp;&nbsp;
             </td>                        
             <td>
                 <az_stream_project_url_status>
             </td>
             <td>
-                &nbsp;
+                &nbsp;&nbsp;
             </td>
             <td>
                 <az_stream_project_connector>
