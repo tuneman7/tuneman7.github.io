@@ -166,7 +166,7 @@ function load_service_values()
 <br/>
 
     <b>Streaming System Examples:</b><br/>
-    <table>
+    <table border=1 cellspacing=0 cellpadding=0>
         <tr>
             <td>
                 <b>1.</b>
@@ -231,9 +231,6 @@ function load_service_values()
             </td>
             <td>
                 &nbsp;&nbsp;<aws_vis_project_url_status>
-            </td>
-            <td>
-
             </td>
             <td>
                 &nbsp;&nbsp;
