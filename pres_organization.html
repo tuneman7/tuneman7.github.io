@@ -2,10 +2,7 @@
 <head>
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
     <meta http-equiv="Pragma" content="no-cache" />
-    <meta http-equiv="Expires" content="0" />   
-    
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>    
-    
+    <meta http-equiv="Expires" content="0" />    
 </head>
     <body>
     ********************<br />
@@ -37,7 +34,6 @@
     <a href='https://github.com/tuneman7/terraform_launcher' target='https://github.com/tuneman7/terraform_launcher'>https://github.com/tuneman7/terraform_launcher</a><br/>
     -->
 <script language="javascript">
-
 function reload_window(){
     m_href=window.location.href;
     m_ticks=Date.now().toString();
@@ -45,112 +41,12 @@ function reload_window(){
     window.location.href = new_loc;
 }
 
-
 setTimeout(() => {
   reload_window();
 }, 5000);
 
-
-let setting_json='{"generic_settings": {"tag_up_style": "display: inline-block;color:green;", "href_style": "display: inline-block;color:blue;", "tag_up_text": "Status: UP", "tag_down_text": "Status: DOWN"}, "services": [{"div_tag_prefix": "aws_k8s_ml", "server_status": "down", "directory": "aws_launchers/lab3/from_scratch/", "server_status_href": "<a href=\\\"aws_k8s_ml_connector.zip\\\" download>Shell SSH Connector</a>", "connector_zip_file": "aws_k8s_ml_connector.zip", "ip_address": "", "log_status": "", "log_href": "", "log_href_link": "http://<ip_address/>:80/log.txt", "app_status": "", "app_href": "", "app_href_link": "http://<ip_address/>:8000/docs", "grafana_status": "", "grafana_href": "", "grafana_href_link": "http://<ip_address/>:3000"}]}';
-const setting_obj = JSON.parse(setting_json);
-
-const tag_up_style = setting_obj.generic_settings.tag_up_style;
-const href_style = setting_obj.generic_settings.href_style;
-
-
-function ucase_word(word)
-{
-    return word.charAt(0).toUpperCase() + word.slice(1)
-}
-
-function update_service_values(service)
-{
-
-    const div_tag_prefix = service.div_tag_prefix;
-
-    //handle the special case
-    if(service["server_status"]=="up")
-    {
-    let condl_d = document.getElementById("aws_k8s_ml_server_href");
-    if(condl_d!=null)
-    {
-        condl_d.style.cssText = href_style;
-        condl_d.innerHTML = service["server_status_href"];
-    }
-    }
-
-
-    for(key in service)
-    {
-        //document.writeln(key + ":" + service[key] + "<br/>");
-        //check if we're dealing with a status tag
-        if(key.endsWith("status") && service[key]=="up")
-        {
-            console.log(key);
-            console.log(service[key]);
-            //get the element we're dealing with
-            let key_array=key.split('_');
-            let l_keys = key_array.length;
-            let subsystem = key.split('_')[0];
-            let status_descriptor = ucase_word(key_array[l_keys-2]) + " " + ucase_word(key_array[l_keys-1]);
-            console.log(status_descriptor);
-            console.log(subsystem);
-
-            let status_id = div_tag_prefix + "_" + subsystem + "_status";
-
-            document.getElementById(status_id).style.cssText = tag_up_style;
-
-            document.getElementById(status_id).innerText = status_descriptor + " :"
-
-            let status_id_up = div_tag_prefix + "_" + subsystem + "_status_up";
-
-            document.getElementById(status_id_up).style.cssText = tag_up_style;
-
-            document.getElementById(status_id_up).innerText = "UP";
-
-            //set up the links
-            let href_id = div_tag_prefix + "_" + subsystem + "_href";
-            
-            var href_div = document.getElementById(href_id);
-            if(href_div!=null)
-            {
-                href_div.style.cssText = tag_up_style;
-            }
-
-
-            let m_key = subsystem + "_href_link"
-            let a_href = service[m_key]
-
-            href_id = div_tag_prefix + "_" + subsystem + "_href_link";
-
-            var href_div = document.getElementById(href_id);
-            if(href_div!=null)
-            {
-                href_div.style.cssText = href_style;
-
-                href_div.innerText = status_descriptor + " Link";
-
-                href_div.setAttribute("href",a_href);
-                href_div.setAttribute("target",a_href);
-            }
-
-        }
-    }
-}
-
-
-function load_service_values()
-{
-    for(var i=0;i<setting_obj.services.length;i++)
-    {
-    let this_service = setting_obj.services[i];
-    update_service_values(this_service);
-    }
-
-}
-
-
-
+let setting_text=''
+const setting_obj = ''
 
 </script>
 
@@ -166,17 +62,17 @@ function load_service_values()
 <br/>
 
     <b>Streaming System Examples:</b><br/>
-    <b>1.</b>&nbsp;<a href='http://35.87.125.189:5555/tree?' target='http://<aws_stream_project_url'>AWS Stream Project JN</a>&nbsp;
+    <b>1.</b>&nbsp;<a href='javascript:alert("This resource is not currently available")' target='http://<aws_stream_project_url>'>AWS Stream Project JN</a>&nbsp;
     
-    <div id='aws_stream_project_url_status' style='display: inline-block;color:green;'>Status: UP</div>
-    <a href='aws_linux_box_connector.zip?1695084026.9389658' download>Shell SSH Connector</a>
+    <aws_stream_project_url_status>
+    <aws_stream_project_connector>
     
     
     <br/>
-    <b>2.</b>&nbsp;<a href='http://20.29.214.164:5555/tree?' target='http://<az_stream_project_url>'>Azure Stream Project JN</a>&nbsp;
+    <b>2.</b>&nbsp;<a href='javascript:alert("This resource is not currently available")' target='http://<az_stream_project_url>'>Azure Stream Project JN</a>&nbsp;
     
-    <div id='az_stream_project_url_status' style='display: inline-block;color:green;'>Status: UP</div>
-    <div id='az_stream_project_connector' style='display: inline-block;color:red;display: none;'></div>
+    <az_stream_project_url_status>
+    <az_stream_project_connector>
     
     <br/>
     <br/>
@@ -185,18 +81,17 @@ function load_service_values()
 
     <b>Visualization System Examples:</b><br/>
 
-    <b>1.</b>&nbsp;<a href='http://35.162.196.10:5001' target='http://35.162.196.10:5001'>AWS Vis Project App</a>
-    &nbsp;&nbsp;<div id='aws_vis_project_url_status' style='display: inline-block;color:green;'>Status: UP</div>&nbsp;&nbsp;<a href='aws_linux_box_connector_vis.zip?1695084043.1910334' download>Shell SSH Connector</a><br/>
-    <b>2.</b>&nbsp;<a href='http://35.162.196.10:8888' target='http://35.162.196.10:8888'>AWS Vis Project JN</a>
-    &nbsp;&nbsp;<div id='aws_vis_project_url_status' style='display: inline-block;color:green;'>Status: UP</div>&nbsp;&nbsp;<a href='aws_linux_box_connector_vis.zip?1695084043.1910334' download>Shell SSH Connector</a><br/>
+    <b>1.</b>&nbsp;<a href='javascript:alert("This resource is not currently available")' >AWS Vis Project App</a>
+    &nbsp;&nbsp;<aws_vis_project_url_status>&nbsp;&nbsp;<aws_vis_project_connector><br/>
+    <b>2.</b>&nbsp;<a href='javascript:alert("This resource is not currently available")' >AWS Vis Project JN</a>
+    &nbsp;&nbsp;<aws_vis_project_url_status>&nbsp;&nbsp;<aws_vis_project_connector><br/>
     <b>3.</b>&nbsp;<a href='javascript:alert("This resource is not currently available")' >Azure Vis Project App</a>
-    &nbsp;&nbsp;<div id='az_vis_project_url_status'  style='display: inline-block;color:red;'>Status: DOWN</div><br/>
+    &nbsp;&nbsp;<az_vis_project_url_status><br/>
     <b>4.</b>&nbsp;<a href='javascript:alert("This resource is not currently available")' >Azure Vis Project JN</a>
-    &nbsp;&nbsp;<div id='az_vis_project_url_status'  style='display: inline-block;color:red;'>Status: DOWN</div><br/>
+    &nbsp;&nbsp;<az_vis_project_url_status><br/>
 
     <br/>
     <br/>
-    
     <b>ML Model Deployed in Kubernetes Example:</b><br/>
     <table border="0" cell_spacing="1", cell_padding="1" border="0">
         <tr>
@@ -207,57 +102,20 @@ function load_service_values()
                 AWS K8s ML Example:
             </td>
             <td>
-
+                <div id='aws_k8s_ml_log_status'  style='display: inline-block;color:red;'>Server Status: DOWN</div>
             </td>
-            <td></td>
-        </tr>            
-        <tr>
-            <td></td>
-            <td>
-
-            </td>
-            <td>
-                <div id='aws_k8s_ml_server_status'  style='display: inline-block;color:red;'>Server Status: </div>
-            </td>
-            <td> <div id='aws_k8s_ml_server_status_up' style='display: inline-block;color:red;'>Down</div></td>
-            <td>&nbsp;</td>
-            <td>
-                <div id='aws_k8s_ml_server_href'  style='display: inline-block;color:red;'></div>
-            </td>
-        </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td>
-                <div id='aws_k8s_ml_log_status'  style='display: inline-block;color:red;'>Log System: </div>
-            </td>
-            <td> <div id='aws_k8s_ml_log_status_up' style='display: inline-block;color:red;'>Down</div></td>
-            <td>&nbsp;</td>
             <td>
                 <div id='aws_k8s_ml_log_href'  style='display: inline-block;color:red;'><a id='aws_k8s_ml_log_href_link' style='display: none'></a></div>
             </td>            
-        </tr>
-        <tr>
-            <td></td>
-            <td></td>
-
             <td>
-                <div id='aws_k8s_ml_app_status'  style='display: inline-block;color:red;'>ML Application: </div>
+                <div id='aws_k8s_ml_app_status'  style='display: inline-block;color:red;'>ML Application: DOWN</div>
             </td>
-            <td> <div id='aws_k8s_ml_app_status_up' style='display: inline-block;color:red;'>Down</div></td>
-            <td>&nbsp;</td>
             <td>
                 <div id='aws_k8s_ml_app_href'  style='display: inline-block;color:red;'><a id='aws_k8s_ml_app_href_link' style='display: none'><div idi'aws_k8s_ml_app_grafana_href_link_href"></div></a></div>
             </td>
-        </tr>
-        <tr>
-            <td></td>
-            <td></td>
             <td>
-                <div id='aws_k8s_ml_grafana_status'  style='display: inline-block;color:red;'>Grafana: </div>
+                <div id='aws_k8s_ml_grafana_status'  style='display: inline-block;color:red;'>Grafana: Down</div>
             </td>
-            <td> <div  id='aws_k8s_ml_grafana_status_up' style='display: inline-block;color:red;'>Down</div></td>
-            <td>&nbsp;</td>
             <td>
                 <div id='aws_k8s_ml_grafana_href'  style='display: inline-block;color:red;'><a id='aws_k8s_ml_grafana_href_link' style='display: none'><div idi'aws_k8s_ml_app_grafana_href_link_href"></div></a></div>
             </td>
@@ -275,6 +133,18 @@ function load_service_values()
 <br/>
 <br/>
 
+<!--
+    <a href='https://github.com/tuneman7/react_flask' target='https://github.com/tuneman7/react_flask'>react_flask_github</a><br/>
+
+    <a href='https://github.com/tuneman7/learn_react' target='https://github.com/tuneman7/learn_react'>learn_react_github</a><br/>
+
+
+    <a href='https://github.com/tuneman7/multi_page_flask' target='https://github.com/tuneman7/multi_page_flask'>multi_page_flask</a><br/>
+        
+    <a href='https://www.techomoro.com/how-to-create-a-multi-page-website-with-react-in-5-minutes/' target='https://www.techomoro.com/how-to-create-a-multi-page-website-with-react-in-5-minutes/'>multi_page_website_react</a><br/>
+
+-->
+
     <a href='https://ucberkeley-2u-com.zoom.us/' target='https://ucberkeley-2u-com.zoom.us/'>Berkeley Zoom NEW</a><br/>
 
     <a href='https://berkeley.zoom.us/' target='https://berkeley.zoom.us/'>Berkeley Zoom OLD</a><br/>
@@ -289,11 +159,4 @@ function load_service_values()
 
     </body>
     
-<script language="javascript">
-
-load_service_values();
-
-</script>
-
-
 </html>
