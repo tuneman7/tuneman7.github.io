@@ -76,6 +76,28 @@ function update_service_values(service)
     {
         condl_d.style.cssText = href_style;
         condl_d.innerHTML = service["server_status_href"];
+        document.getElementById("aws_k8s_ml_log_status").style.cssText = tag_up_style;
+        document.getElementById("aws_k8s_ml_log_status_up").style.cssText = tag_up_style;
+        document.getElementById("aws_k8s_ml_log_status_up").innerText = "UP";
+
+        //<div id='aws_k8s_ml_log_href'  style='display: inline-block;color:red;'><a id='aws_k8s_ml_log_href_link' style='display: none'></a></div>
+        let m_key = "aws_k8s_ml_log_status_up"
+        let a_href = service["log_href_link"]
+
+        document.getElementById("aws_k8s_ml_log_href").style.cssText = tag_up_style;
+        var href_div = document.getElementById("aws_k8s_ml_log_href_link");
+        if(href_div!=null)
+        {
+            href_div.style.cssText = href_style;
+
+            href_div.innerText = "Log System Link";
+
+            href_div.setAttribute("href",a_href);
+            href_div.setAttribute("target",a_href);
+        }
+
+
+        
     }
     }
 
