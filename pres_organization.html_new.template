@@ -401,7 +401,7 @@ function load_service_values()
             <td></td>
             <td></td>
             <td>
-                <div id='aws_k8s_ml_webapp_status'  style='display: inline-block;color:red;'>Grafana: </div>
+                <div id='aws_k8s_ml_webapp_status'  style='display: inline-block;color:red;'>Web Application: </div>
             </td>
             <td> <div  id='aws_k8s_ml_webapp_status_up' style='display: inline-block;color:red;'>Down</div></td>
             <td>&nbsp;</td>
