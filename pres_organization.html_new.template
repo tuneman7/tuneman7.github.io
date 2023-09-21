@@ -381,7 +381,7 @@ function load_service_values()
             <td> <div id='aws_k8s_ml_app_status_up' style='display: inline-block;color:red;'>Down</div></td>
             <td>&nbsp;</td>
             <td>
-                <div id='aws_k8s_ml_app_href'  style='display: inline-block;color:red;'><a id='aws_k8s_ml_app_href_link' style='display: none'><div idi'aws_k8s_ml_app_grafana_href_link_href"></div></a></div>
+                <div id='aws_k8s_ml_app_href'  style='display: inline-block;color:red;'><a id='aws_k8s_ml_app_href_link' style='display: none'></a></div>
             </td>
         </tr>
         <tr>
@@ -393,10 +393,24 @@ function load_service_values()
             <td> <div  id='aws_k8s_ml_grafana_status_up' style='display: inline-block;color:red;'>Down</div></td>
             <td>&nbsp;</td>
             <td>
-                <div id='aws_k8s_ml_grafana_href'  style='display: inline-block;color:red;'><a id='aws_k8s_ml_grafana_href_link' style='display: none'><div idi'aws_k8s_ml_app_grafana_href_link_href"></div></a></div>
+                <div id='aws_k8s_ml_grafana_href'  style='display: inline-block;color:red;'><a id='aws_k8s_ml_grafana_href_link' style='display: none'></a></div>
             </td>
 
         </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td>
+                <div id='aws_k8s_ml_webapp_status'  style='display: inline-block;color:red;'>Grafana: </div>
+            </td>
+            <td> <div  id='aws_k8s_ml_webapp_status_up' style='display: inline-block;color:red;'>Down</div></td>
+            <td>&nbsp;</td>
+            <td>
+                <div id='aws_k8s_ml_webapp_href'  style='display: inline-block;color:red;'><a id='aws_k8s_ml_webapp_href_link' style='display: none'></a></div>
+            </td>
+
+        </tr>
+
 
     </table>
 
