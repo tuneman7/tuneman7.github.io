@@ -44,7 +44,7 @@ setTimeout(() => {
 }, 5000);
 
 
-let setting_json='{"generic_settings": {"tag_up_style": "display: inline-block;color:green;", "href_style": "display: inline-block;color:blue;", "tag_up_text": "Status: UP", "tag_down_text": "Status: DOWN"}, "services": [{"div_tag_prefix": "aws_k8s_ml", "server_status": "down", "directory": "aws_launchers/lab3/from_scratch/", "server_status_href": "<a href=\\\"aws_k8s_ml_connector.zip\\\" download>Shell SSH Connector</a>", "connector_zip_file": "aws_k8s_ml_connector.zip", "ip_address": "", "log_status": "", "log_href": "", "log_href_link": "http://<ip_address/>:80/log.txt", "app_status": "", "app_href": "", "app_href_link": "http://<ip_address/>:8000/docs", "grafana_status": "", "grafana_href": "", "grafana_href_link": "http://<ip_address/>:3000", "webapp_status": "", "webapp_href": "", "webapp_href_link": "http://<ip_address/>:5000"}]}';
+let setting_json='{"generic_settings": {"tag_up_style": "display: inline-block;color:green;", "href_style": "display: inline-block;color:blue;", "tag_up_text": "Status: UP", "tag_down_text": "Status: DOWN"}, "services": [{"div_tag_prefix": "aws_k8s_ml", "server_status": "up", "directory": "aws_launchers/lab3/from_scratch/", "server_status_href": "<a href=\\\"aws_k8s_ml_connector.zip\\\" download>Shell SSH Connector</a>", "connector_zip_file": "aws_k8s_ml_connector.zip", "ip_address": "34.220.156.78", "log_status": "up", "log_href": "", "log_href_link": "http://34.220.156.78:80/log.txt", "app_status": "up", "app_href": "", "app_href_link": "http://34.220.156.78:8000/docs", "grafana_status": "up", "grafana_href": "", "grafana_href_link": "http://34.220.156.78:3000", "webapp_status": "up", "webapp_href": "", "webapp_href_link": "http://34.220.156.78:5000"}]}';
 const setting_obj = JSON.parse(setting_json);
 
 const tag_up_style = setting_obj.generic_settings.tag_up_style;
@@ -210,13 +210,13 @@ function load_service_values()
                 &nbsp;&nbsp;
             </td>
             <td>
-                <a href='http://20.230.200.130:5555/tree?' target='http://20.230.200.130:5555/tree?'>Azure Stream Project JN</a>
+                <a href='javascript:alert("This resource is not currently available")' >Azure Stream Project JN</a>
             </td>
             <td>
                 &nbsp;&nbsp;
             </td>                        
             <td>
-                <div id='az_stream_project_url_status' style='display: inline-block;color:green;'>Status: UP</div>
+                <div id='az_stream_project_url_status' style='display: inline-block;color:red;'>Status: Down</div>
             </td>
             <td>
                 &nbsp;&nbsp;
@@ -281,10 +281,10 @@ function load_service_values()
                 &nbsp;
             </td>
             <td>
-                <a href='http://20.230.203.211:5001' target='http://20.230.203.211:5001'>Azure Vis Project App</a>
+                <a href='javascript:alert("This resource is not currently available")' >Azure Vis Project App</a>
             </td>
             <td>
-                &nbsp;&nbsp;<div id='az_vis_project_url_status' style='display: inline-block;color:green;'>Status: UP</div><br/>
+                &nbsp;&nbsp;<div id='az_vis_project_url_status'  style='display: inline-block;color:red;'>Status: Down</div><br/>
             </td>
             <td>
                 &nbsp;&nbsp;
@@ -302,10 +302,10 @@ function load_service_values()
                 &nbsp;
             </td>
             <td>
-                <a href='http://20.230.203.211:8888' target='http://20.230.203.211:8888'>Azure Vis Project JN</a>
+                <a href='javascript:alert("This resource is not currently available")' >Azure Vis Project JN</a>
             </td>
             <td>
-                &nbsp;&nbsp;<div id='az_vis_project_url_status' style='display: inline-block;color:green;'>Status: UP</div><br/>
+                &nbsp;&nbsp;<div id='az_vis_project_url_status'  style='display: inline-block;color:red;'>Status: Down</div><br/>
             </td>
             <td>
                 &nbsp;&nbsp;
